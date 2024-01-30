@@ -11,9 +11,6 @@ export class AppComponent {
   stream: MediaStream | undefined;
   audioContext: AudioContext | undefined;
   audioWorkletNode: AudioWorkletNode | undefined;
-  downloadRef: SafeResourceUrl | undefined;
-
-  constructor(private sanitizer: DomSanitizer) {}
 
   stop(): void {
     this.stream?.getTracks().forEach((track) => track.stop());
